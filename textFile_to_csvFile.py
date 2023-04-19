@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 
 overalldata = [["Islamabad", "ISB", "Toronto", "YYZ", "Pakistan - Canada", "ISB-YYZ", "4:25am - 2:55pm", "05/10/2023", "05/10/2023", "19h 30m (1 stop)", "2h 10m in Abu Dhabi (AUH)", "Etihad Airways", "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/vector/s/EY_sq.svg", "$2,534"],
 ["Islamabad", "ISB", "Toronto", "YYZ", "Pakistan - Canada", "ISB-YYZ", "5:05am - 7:30pm", "05/10/2023", "05/10/2023", "23h 25m (2 stops)", "3h in Istanbul (IST) � 2h 50m in Frankfurt (FRA)", "Multiple airlines", "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/vector/s/multiple_airlines_logo_sq.svg", "$3,502"],
@@ -2413,17 +2414,15 @@ overalldata = [["Islamabad", "ISB", "Toronto", "YYZ", "Pakistan - Canada", "ISB-
 ["Peshawar", "PEW", "New York", "JFK", "Pakistan - United States", "PEW-JFK", "3:55am - 3:20pm", "05/11/2023", "05/11/2023", "20h 25m (1 stop)", "2h 25m in Doha (DOH)", "Multiple airlines � JetBlue Airways 6640 operated by Qatar Airways", "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/vector/s/multiple_airlines_logo_sq.svg", "$2,552"],
 ["Peshawar", "PEW", "New York", "JFK", "Pakistan - United States", "PEW-JFK", "3:55am - 3:20pm", "05/11/2023", "05/11/2023", "20h 25m (1 stop)", "2h 25m in Doha (DOH)", "JetBlue Airways � JetBlue Airways 5588 and 6640 operated by Qatar Airways", "https://images.trvl-media.com/media/content/expus/graphics/static_content/fusion/v0.1b/images/airlines/vector/s/b6_sq.svg", "$3,337"]
 ]
-# with open("outputFile.csv", 'w', newline='', encoding='utf-8') as file2:
+# with open("realTIme_flightData.csv", 'w', newline='', encoding='utf-8') as file2:
 #     writer2 = csv.writer(file2)
 #     # write the column headers
 #     writer2.writerow(['Origin', 'OriginCode', 'Destination', 'DestinationCode', 'Country', 'FLight_Path', 'Flight_Time', 'Departure Date', 'Return Date', 'Duration', 'Stops', 'Flight_Name', 'Img_URL', 'Price'])
 #     for row in overalldata:
 #         writer2.writerow(row)
 
-# import pandas as pd
 #
 # # read CSV file into a Pandas DataFrame
-# df = pd.read_csv('outputFile.csv')
-#
+# df = pd.read_csv('realTIme_flightData.csv')
 # # print the DataFrame
-# print(df)
+# print(df["Origin"].head())

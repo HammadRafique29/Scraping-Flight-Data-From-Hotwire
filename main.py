@@ -20,14 +20,8 @@ targetCountries = ['United Arab Emirates', 'Saudi Arabia', 'United States', 'Uni
 
 values = 0
 overallData = []
-with open('flight_data.csv', 'a', newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    # write the column headers
-    writer.writerow(['Origin', 'OriginCode', 'Destination', 'DestinationCode', 'Country', 'FLight_Path', 'Flight_Time', 'Departure Date', 'Return Date', 'Duration', 'Stops', 'Flight_Name', 'Img_URL', 'Price'])
-    # write each row of data
-
-    for l in range(11, 20):
-        for m in range(11, 20):
+for l in range(11, 20):
+        for m in range(14, 20):
             for org in pakistanAirports:
                 if m>=l:
                     for des in desAirports:
@@ -70,7 +64,6 @@ with open('flight_data.csv', 'a', newline='') as csvfile:
                                         file.write(
                                             f'["{origin}", "{originCode}", "{destination}", "{destinationCode}", "{country}", "{path}", "{flightTime}", "{arrDate}", "{desDate}", "{duration}", "{stopDur}", "{flightName}", "{flightImgUrl}", "{price}"],\n')
                                         file.close()
-                                    writer.writerow(gotData)
                             except Exception as e:
                                 pass
                             driver.close()
@@ -81,9 +74,9 @@ with open('flight_data.csv', 'a', newline='') as csvfile:
 
 
 
-with open("outputFile.csv", "a") as file2:
-    writer2 = csv.writer(csvfile)
-    # write the column headers
-    writer2.writerow(['Origin', 'OriginCode', 'Destination', 'DestinationCode', 'Country', 'FLight_Path', 'Flight_Time', 'Departure Date', 'Return Date', 'Duration', 'Stops', 'Flight_Name', 'Img_URL', 'Price'])
-    for row in overallData:
-        writer2.writerow(row)
+# with open("outputFile.csv", "a") as file2:
+#     writer2 = csv.writer(csvfile)
+#     # write the column headers
+#     writer2.writerow(['Origin', 'OriginCode', 'Destination', 'DestinationCode', 'Country', 'FLight_Path', 'Flight_Time', 'Departure Date', 'Return Date', 'Duration', 'Stops', 'Flight_Name', 'Img_URL', 'Price'])
+#     for row in overallData:
+#         writer2.writerow(row)
