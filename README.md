@@ -1,9 +1,8 @@
 
-# Web Scraping with Selenium WebDriver
+# Scraping Real Time Flight Data From Hotwire
 
-This repository contains a web scraping tool that utilizes **Selenium WebDriver** with the latest version of FireFox to scrape data from the web. The tool supports proxy rotating and manual user agents for additional privacy and flexibility.
-This is the initial build of script using proxy rotating, user agents and other techniques to stay anonymous.
-I am know this is the not professional script but will be useful for moderate scraping.
+This repository contains a web scraping scripts plus tools to get flights data from Hotwire website.
+
 ## Requirements
 
 The following dependencies are required to run the web scraping tool:
@@ -12,9 +11,6 @@ The following dependencies are required to run the web scraping tool:
 - Selenium WebDriver
 - geckodriver (for FireFox)
 - Requests (for sending HTTP requests)
-- Random (for parsing HTML)
-- Time (for rotating proxies)
-- Beautiful Soup (for parsing HTML)
 
 You can install the dependencies using pip:
 
